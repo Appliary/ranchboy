@@ -1,4 +1,4 @@
-
+```
                                     RANCHBOY
                                     ⎺⎺⎺⎺⎺⎺⎺⎺
          Connects to your Rancher2 nodes and pods easily from the CLI.
@@ -26,3 +26,4 @@
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
              All the clusters, nodes and pods names can be partial.
+```
