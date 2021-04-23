@@ -1,0 +1,21 @@
+{
+  "name": "ranchboy",
+  "version": "1.0.6",
+  "description": "Connects to your Rancher2 nodes and pods easily from the CLI.",
+  "main": "index.js",
+  "author": "miccarr <miccarr@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.5",
+    "axios": "^0.21.1",
+    "exec-sh": "^0.4.0",
+    "mkdirp": "^1.0.4",
+    "prompts": "^2.4.1"
+  },
+  "bin": {
+    "ranchboy": "./index.js"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}
