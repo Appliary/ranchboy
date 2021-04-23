@@ -14,7 +14,7 @@ const args = GetArgs();
 
 if (args[0] === '--help') {
   console.log('v' + require('./package.json').version);
-  console.log(FS.readFileSync(`${__dirname}/readme`).toString('utf8'));
+  console.log(FS.readFileSync(`${__dirname}/readme.ans`).toString('utf8'));
   return;
 }
 

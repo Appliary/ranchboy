@@ -1,10 +1,14 @@
 {
   "name": "ranchboy",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Connects to your Rancher2 nodes and pods easily from the CLI.",
   "main": "index.js",
   "author": "miccarr <miccarr@me.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Appliary/ranchboy.git"
+  },
   "dependencies": {
     "adm-zip": "^0.5.5",
     "axios": "^0.21.1",
@@ -15,6 +19,7 @@
   "bin": {
     "ranchboy": "./index.js"
   },
+  "man": "./readme.man",
   "scripts": {
     "start": "node ./index.js"
   }
