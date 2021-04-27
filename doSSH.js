@@ -11,7 +11,7 @@ module.exports = async function DoSSH(clusterName, nodeName, podName, shell) {
 
   const privateKey = await GetPrivateKey(clusterName, nodeName);
 
-  let cmd = `ssh -ti "${privateKey}" ${node.sshUser}@${node.externalIpAddress} `;
+  let cmd = `ssh -q -o GlobalKnownHostsFile=/dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -ti "${privateKey}" ${node.sshUser}@${node.externalIpAddress} `;
 
   if (podName && podName !== '-') {
     const pod = await GetPod(clusterName, nodeName, podName);

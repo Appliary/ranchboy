@@ -1,6 +1,6 @@
 {
   "name": "ranchboy",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Connects to your Rancher2 nodes and pods easily from the CLI.",
   "main": "index.js",
   "author": "miccarr <miccarr@me.com>",
