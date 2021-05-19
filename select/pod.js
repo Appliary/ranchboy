@@ -16,15 +16,13 @@ module.exports = async function SelectPod(cluster, node) {
     ...pods.map(x => ({title: x.slug, value: x.workloadId}))
   ]
 
-  const a = await Prompts({
+  const { pod } = await Prompts({
     type: 'autocomplete',
     name: 'pod',
     message: 'Pod:',
     choices,
     suggest: Fuzzy.suggest,
   });
-
-  console.log(a);
 
   if(!pod) return process.exit(127);
 
