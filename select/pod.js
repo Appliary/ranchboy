@@ -16,7 +16,7 @@ module.exports = async function SelectPod(cluster, node) {
     ...pods.map(x => ({title: x.slug, value: x.workloadId}))
   ]
 
-  const { pod } = await Prompts({
+  const a = await Prompts({
     type: 'autocomplete',
     name: 'pod',
     message: 'Pod:',
@@ -24,7 +24,11 @@ module.exports = async function SelectPod(cluster, node) {
     suggest: Fuzzy.suggest,
   });
 
-  if(!pod || pod === '-')
+  console.log(a);
+
+  if(!pod) return process.exit(127);
+
+  if(pod === '-')
     return DoSSH(cluster, node);
 
   return SelectMode(cluster, node, pod);

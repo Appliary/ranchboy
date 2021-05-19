@@ -25,7 +25,7 @@ module.exports = async function GetPods(clusterName, nodeName) {
     res.data.data.forEach(pod => {
       if (pod.nodeId != node.id) return;
       if (!pod.status.containerStatuses.length) return;
-      if (!pod.workloadId.startsWith('deployment:')) return;
+      if (!pod.workloadId || !pod.workloadId.startsWith('deployment:')) return;
       pod.slug = pod.workloadId.slice(11).replace(/:/g, ' - ');
       try {
         pod.container = pod.status.containerStatuses[0].containerID.slice(9);

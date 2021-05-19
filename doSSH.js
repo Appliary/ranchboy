@@ -20,9 +20,9 @@ module.exports = async function DoSSH(clusterName, nodeName, podName, shell) {
 
     if (shell) {
       console.log(`\n[34m[${cluster.name} ‣ ${node.hostname}]\n  ↳ [${name}]\n\n[90m(CTRL-D TO QUIT)[0m`);
-      cmd += `docker exec -ti  ${container} bash`;
+      cmd += `docker exec -ti  ${container} sh`;
     } else {
-      cmd += `"docker logs -tf ${container}"`;
+      cmd += `"docker logs -t${process.stdout.isTTY?'f':''} ${container}"`;
     }
   } else {
     console.log(`\n[34m[${cluster.name} ‣ ${node.hostname}]\n\n[90m(CTRL-D TO QUIT)[0m`);
